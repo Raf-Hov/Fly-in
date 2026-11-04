@@ -34,14 +34,14 @@ def visual_lobby() -> str:
                 break
             print(f"{fm}: {am.stem}")
         print()
-    le += 1
-    print(f"{le}: Quit\n")
+    print("q: Quit\n")
     print("---------------------------")
     while True:
         try:
-            choosed = int(input("Choose one of these files: "))
-            if choosed == le:
+            choosed = input("Choose one of these files: ")
+            if choosed == 'q':
                 return "dummy"
+            choosed = int(choosed)
             for _, vc in file_list:
                 for bv in vc:
                     lx, lz = bv

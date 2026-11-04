@@ -9,3 +9,9 @@ class ParsError(Exception):
     def __init__(self, zone: str):
         self.zone = zone
         super().__init__(f"Something wrong with: {zone}")
+
+
+class DubError(Exception):
+    def __init__(self, zone: str):
+        self.zone = zone
+        super().__init__(f"Dublicate locateted: {zone}")

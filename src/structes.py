@@ -1,13 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from enum import Enum
-
-
-class ZoneTypes(str, Enum):
-    NORMAL = "normal"
-    BLOCKED = "blocked"
-    RESTRICTED = "restricted"
-    PRIORITY = "priority"
 
 
 @dataclass
@@ -15,7 +7,7 @@ class Zone:
     name: str
     x: int
     y: int
-    zone: str = ZoneTypes.NORMAL
+    zone: str = "normal"
     color: Optional[str] = None
     max_drones: int = 1
     is_start: bool = False
@@ -34,5 +26,5 @@ class MapData:
     nb_drones: int
     start_hub: Zone
     end_hub: Zone
-    zone: dict[str, Zone] = field(default_factory=dict)
+    zone: list[Zone] = field(default_factory=list)
     connections: list[Connection] = field(default_factory=list)
