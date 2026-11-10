@@ -1,4 +1,3 @@
-"""Interactive menu to pick a map file from the maps/ directory."""
 from pathlib import Path
 
 

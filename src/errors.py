@@ -1,6 +1,3 @@
-"""Custom exceptions of the project."""
-
-
 class ParseError(Exception):
     """Invalid map file: carries the line number and the cause."""
 

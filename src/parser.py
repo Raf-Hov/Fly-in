@@ -1,4 +1,3 @@
-"""Parser for the Fly-in map format."""
 from .errors import ParseError
 from .structes import Connection, MapData, Zone, ZoneTypes
 

@@ -1,9 +1,8 @@
-"""Entry point of the Fly-in simulator."""
 import sys
-
 from .errors import ParseError
 from .lobby_vizual import MapLobby
 from .parser import MapParser
+from .grapic import MapVisualizer
 
 
 def main() -> None:
@@ -21,8 +20,9 @@ def main() -> None:
     except ParseError as err:
         print(f"Error: {err}", file=sys.stderr)
         sys.exit(1)
-    print(f"Loaded {len(data.zones)} zones, {len(data.connections)} "
-          f"connections, {data.nb_drones} drones")
+    MapVisualizer(data).show()
+    # print(f"Loaded {len(data.zones)} zones, {len(data.connections)} "
+    #       f"connections, {data.nb_drones} drones") tested
 
 
 if __name__ == "__main__":

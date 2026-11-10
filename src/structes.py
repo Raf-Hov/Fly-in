@@ -1,4 +1,3 @@
-"""Data structures shared by the parser, pathfinder and simulator."""
 from dataclasses import dataclass, field
 from enum import Enum
 
